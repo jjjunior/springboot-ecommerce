@@ -1,0 +1,28 @@
+<configuration>
+
+    <!-- Define o padrão de log para o console -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Define o padrão de log para um arquivo -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/springboot-ecommerce.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Nível de log geral da aplicação -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- Defina níveis de log específicos para pacotes ou classes -->
+    <logger name="org.apache.kafka" level="DEBUG"/>
+    <logger name="br.com.jota" level="DEBUG" />
+
+</configuration>

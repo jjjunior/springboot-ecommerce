@@ -1,0 +1,7 @@
+br/com/jota/NewOrderMain.class
+br/com/jota/FraudDetectorService.class
+br/com/jota/ConsumerFunction.class
+br/com/jota/EmailService.class
+br/com/jota/KafkaService.class
+br/com/jota/LogService.class
+br/com/jota/KafkaDispatcher.class
